@@ -105,7 +105,7 @@ p {
     color: var(--text-primary);
     border: 1px solid var(--text-primary);
     cursor: pointer;
-    transition: var(--transition);
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
 .btn:hover {
@@ -138,9 +138,16 @@ header {
     width: 100%;
     z-index: 1000;
     padding: 1.5rem 0;
+    background-color: transparent;
+    transition: var(--transition);
+}
+
+header.scrolled {
     background-color: rgba(249, 248, 246, 0.85);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
+    padding: 1rem 0;
 }
 
 .nav-container {
@@ -170,6 +177,22 @@ header {
     color: var(--text-primary);
     transition: var(--transition);
     font-weight: 500;
+    position: relative;
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background-color: var(--text-primary);
+    transition: width 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.nav-links a:hover::after {
+    width: 100%;
 }
 
 .nav-links a:hover {
@@ -225,6 +248,50 @@ header {
     position: relative;
     z-index: 10;
     max-width: 700px;
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hero-content h1,
+.hero-content .subtitle,
+.hero-content .btn {
+    opacity: 0;
+    animation: fadeUp 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+.hero-content h1 {
+    animation-delay: 0s;
+}
+
+.hero-content .subtitle {
+    animation-delay: 0.2s;
+}
+
+.hero-content .btn {
+    animation-delay: 0.4s;
+}
+
+/* ==========================================================================
+   SCROLL REVEAL (INTERSECTION OBSERVER)
+   ========================================================================== */
+.reveal {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94), transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 /* ==========================================================================
@@ -296,11 +363,12 @@ header {
     width: 100%;
     aspect-ratio: 4 / 3;
     object-fit: cover;
-    transition: transform 0.6s ease;
+    transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94), filter 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
 .project-card:hover .project-image {
     transform: scale(1.05);
+    filter: brightness(0.9);
 }
 
 .project-info {
