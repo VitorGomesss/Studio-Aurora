@@ -57,8 +57,8 @@ document.addEventListener('DOMContentLoaded', () => {
     // Reveal animation on scroll (Intersection Observer)
     const revealOptions = {
         root: null,
-        rootMargin: "-15% 0px -15% 0px",
-        threshold: 0.05
+        rootMargin: "-10% 0px -10% 0px", // Reduzido ligeiramente para dar mais espaço de estabilidade
+        threshold: [0, 0.2] // Usa múltiplos thresholds para evitar o efeito gangorra
     };
 
     const revealObserver = new IntersectionObserver((entries) => {
