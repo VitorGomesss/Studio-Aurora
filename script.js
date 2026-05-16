@@ -56,16 +56,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Reveal animation on scroll (Intersection Observer)
     const revealOptions = {
-        threshold: 0.15,
-        rootMargin: "0px 0px -50px 0px"
+        root: null,
+        rootMargin: "-15% 0px -15% 0px",
+        threshold: 0.05
     };
 
-    const revealObserver = new IntersectionObserver((entries, observer) => {
+    const revealObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('active');
-                // Stop observing once it's revealed
-                observer.unobserve(entry.target);
+            } else {
+                entry.target.classList.remove('active');
             }
         });
     }, revealOptions);
