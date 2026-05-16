@@ -1,0 +1,558 @@
+/* ==========================================================================
+   RESET & VARIÁVEIS
+   ========================================================================== */
+:root {
+    --bg-color: #F9F8F6;
+    --text-primary: #2B2A27;
+    --text-secondary: #8C8275;
+    --footer-bg: #EBE8E3;
+    --font-serif: 'Playfair Display', serif;
+    --font-sans: 'Inter', sans-serif;
+    --transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-primary);
+    font-family: var(--font-sans);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+/* ==========================================================================
+   TIPOGRAFIA
+   ========================================================================== */
+h1, h2, h3, .logo {
+    font-family: var(--font-serif);
+    font-weight: 400;
+}
+
+h1 {
+    font-size: clamp(3rem, 6vw, 5.5rem);
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+    color: var(--text-primary);
+}
+
+h2 {
+    font-size: clamp(2.5rem, 4vw, 3.5rem);
+    margin-bottom: 2rem;
+    color: var(--text-primary);
+}
+
+p {
+    font-size: 1.125rem;
+    color: var(--text-primary);
+}
+
+.subtitle {
+    font-family: var(--font-sans);
+    font-size: clamp(1.125rem, 2vw, 1.35rem);
+    font-weight: 300;
+    color: var(--text-primary);
+    margin-bottom: 3rem;
+    max-width: 600px;
+}
+
+/* ==========================================================================
+   COMPONENTES
+   ========================================================================== */
+.container {
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 5%;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-sans);
+    font-size: 0.875rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    padding: 1.25rem 2.5rem;
+    background: transparent;
+    color: var(--text-primary);
+    border: 1px solid var(--text-primary);
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.btn:hover {
+    background-color: var(--text-primary);
+    color: var(--bg-color);
+}
+
+.btn-filled {
+    background-color: var(--text-primary);
+    color: #FFF !important;
+    border-color: var(--text-primary);
+}
+
+.btn-filled:hover {
+    background-color: transparent;
+    color: var(--text-primary) !important;
+}
+
+.section-padding {
+    padding: 10rem 0;
+}
+
+/* ==========================================================================
+   HEADER & NAVEGAÇÃO
+   ========================================================================== */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 1.5rem 0;
+    background-color: rgba(249, 248, 246, 0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.25rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--text-primary);
+}
+
+.nav-links {
+    display: flex;
+    justify-content: flex-end;
+    gap: 30px;
+    align-items: center;
+}
+
+.nav-links a {
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--text-primary);
+    transition: var(--transition);
+    font-weight: 500;
+}
+
+.nav-links a:hover {
+    color: var(--text-secondary);
+}
+
+.btn-nav {
+    border: 1px solid var(--text-primary);
+    padding: 0.75rem 1.5rem;
+    color: var(--text-primary) !important;
+}
+
+.btn-nav:hover {
+    background-color: var(--text-secondary);
+    color: #FFF !important;
+    border-color: var(--text-secondary);
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--text-primary);
+}
+
+/* ==========================================================================
+   HERO SECTION
+   ========================================================================== */
+.hero {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background-image: url('https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding-top: 100px;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 60%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(249, 248, 246, 0.95) 0%, rgba(249, 248, 246, 0.7) 50%, rgba(249, 248, 246, 0) 100%);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 10;
+    max-width: 700px;
+}
+
+/* ==========================================================================
+   FILOSOFIA (MANIFESTO)
+   ========================================================================== */
+.philosophy {
+    background-color: var(--bg-color);
+}
+
+.philosophy-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: flex-start;
+}
+
+.philosophy-title-col h2 {
+    font-size: clamp(2.5rem, 4vw, 3.5rem);
+    color: var(--text-primary);
+    margin-bottom: 0;
+    border-left: 1px solid var(--text-secondary);
+    padding-left: 2rem;
+    text-align: left;
+}
+
+.philosophy-text-col p {
+    font-size: clamp(1.125rem, 2vw, 1.35rem);
+    font-weight: 300;
+    line-height: 1.6;
+    color: var(--text-secondary);
+    text-align: left;
+}
+
+.philosophy-text-col .highlight {
+    font-weight: 500;
+    color: var(--text-primary);
+}
+
+/* ==========================================================================
+   PORTFÓLIO (CSS GRID ASSIMÉTRICO)
+   ========================================================================== */
+.portfolio {
+    background-color: var(--bg-color);
+}
+
+.portfolio-header {
+    margin-bottom: 5rem;
+}
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 60px;
+}
+
+.project-card {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+}
+
+.project-image-wrapper {
+    width: 100%;
+    overflow: hidden;
+    background-color: var(--footer-bg);
+}
+
+.project-image {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+.project-card:hover .project-image {
+    transform: scale(1.05);
+}
+
+.project-info {
+    margin-top: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+}
+
+.project-title {
+    font-family: var(--font-serif);
+    font-size: 1.5rem;
+    color: var(--text-primary);
+    margin: 0;
+}
+
+.project-category {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--text-secondary);
+    margin: 0;
+}
+
+/* ==========================================================================
+   PROCESSO
+   ========================================================================== */
+.process {
+    background-color: var(--bg-color);
+}
+
+.process-header {
+    text-align: center;
+    margin-bottom: 6rem;
+    max-width: 700px;
+    margin-inline: auto;
+}
+
+.process-subtitle {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-top: 1.5rem;
+}
+
+.process-steps {
+    display: flex;
+    justify-content: space-between;
+    gap: 4rem;
+}
+
+.step-card {
+    flex: 1;
+    position: relative;
+    border-top: 1px solid #EBE8E3;
+    padding-top: 2.5rem;
+}
+
+.step-number {
+    position: absolute;
+    top: 0.5rem;
+    left: 0;
+    font-family: var(--font-serif);
+    font-size: 6rem;
+    color: rgba(140, 130, 117, 0.1);
+    line-height: 1;
+    z-index: 0;
+}
+
+.step-title {
+    font-family: var(--font-serif);
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+    color: var(--text-primary);
+    position: relative;
+    z-index: 1;
+}
+
+.step-desc {
+    color: var(--text-secondary);
+    font-size: 1.125rem;
+    font-weight: 300;
+    line-height: 1.6;
+    position: relative;
+    z-index: 1;
+}
+
+/* ==========================================================================
+   PRE-FOOTER CTA
+   ========================================================================== */
+.pre-footer {
+    background-color: var(--footer-bg);
+    text-align: center;
+}
+
+.cta-content {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+.cta-content h2 {
+    margin-bottom: 0;
+}
+
+.cta-content p {
+    font-size: 1.25rem;
+    color: var(--text-secondary);
+    font-weight: 300;
+}
+
+/* ==========================================================================
+   FOOTER
+   ========================================================================== */
+footer {
+    background-color: var(--bg-color);
+    padding: 6rem 0 2rem;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 4rem;
+    margin-bottom: 4rem;
+}
+
+.footer-logo {
+    font-family: var(--font-serif);
+    font-size: 1.5rem;
+    color: var(--text-primary);
+    display: block;
+    margin-bottom: 1rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+.brand-col p {
+    color: var(--text-secondary);
+    font-size: 1rem;
+}
+
+.footer-col-title {
+    font-family: var(--font-sans);
+    font-weight: 500;
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--text-primary);
+    display: block;
+    margin-bottom: 1.5rem;
+}
+
+.footer-col p, .footer-col address {
+    color: var(--text-secondary);
+    font-size: 1rem;
+    font-style: normal;
+    line-height: 1.6;
+    margin-bottom: 0.5rem;
+}
+
+.footer-col a {
+    color: var(--text-secondary);
+    transition: color 0.3s ease;
+}
+
+.footer-col a:hover {
+    color: var(--text-primary);
+}
+
+.social-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(43, 42, 39, 0.1);
+}
+
+.copyright {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+}
+
+/* ==========================================================================
+   RESPONSIVIDADE
+   ========================================================================== */
+@media (max-width: 1024px) {
+    .hero::before {
+        width: 100%;
+        background: linear-gradient(to right, rgba(249, 248, 246, 0.9) 0%, rgba(249, 248, 246, 0.7) 100%);
+    }
+
+    .philosophy-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .portfolio-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .project-1, .project-2, .project-3, .project-4 { 
+        grid-column: span 1; 
+    }
+    
+    .project-1 .project-image, 
+    .project-2 .project-image, 
+    .project-3 .project-image, 
+    .project-4 .project-image {
+        aspect-ratio: 16 / 9;
+    }
+    
+    .process-steps {
+        flex-direction: column;
+        gap: 4rem;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+    .menu-toggle {
+        display: block;
+    }
+    .section-padding {
+        padding: 6rem 0;
+    }
+    .project-1 .project-image, 
+    .project-2 .project-image, 
+    .project-3 .project-image, 
+    .project-4 .project-image {
+        aspect-ratio: 4 / 3;
+    }
+    .portfolio-header {
+        margin-bottom: 3rem;
+    }
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+}

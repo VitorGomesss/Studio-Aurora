@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Studio Aurora | Arquitetura Afetiva e Atemporal</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <div class="container nav-container">
+            <a href="#inicio" class="logo">Studio Aurora</a>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#filosofia">Filosofia</a></li>
+                    <li><a href="#projetos">Projetos</a></li>
+                    <li><a href="#processo">Processo</a></li>
+                    <li><a href="#contato" class="btn-nav">Contato</a></li>
+                </ul>
+                <button class="menu-toggle" aria-label="Abrir Menu">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="3" y1="12" x2="21" y2="12"></line>
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <line x1="3" y1="18" x2="21" y2="18"></line>
+                    </svg>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section id="inicio" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>A luz molda o espaço. O design molda a vida.</h1>
+                <p class="subtitle">Arquitetura afetiva, minimalista e atemporal para espaços que inspiram.</p>
+                <a href="#projetos" class="btn">Explorar Portfólio</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- A FILOSOFIA -->
+    <section id="filosofia" class="philosophy section-padding">
+        <div class="container">
+            <div class="philosophy-content">
+                <div class="philosophy-title-col">
+                    <h2>Nossa Essência</h2>
+                </div>
+                <div class="philosophy-text-col">
+                    <p><span class="highlight">Acreditamos que a verdadeira sofisticação reside na simplicidade.</span> No Studio Aurora, cada linha é intencional e cada material é escolhido para contar uma história. Desenhamos refúgios urbanos onde a iluminação natural e as texturas orgânicas se encontram.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PORTFÓLIO (CSS GRID) -->
+    <section id="projetos" class="portfolio section-padding">
+        <div class="container">
+            <div class="portfolio-header">
+                <h2>Projetos Selecionados</h2>
+            </div>
+            
+            <div class="portfolio-grid">
+                <!-- Projeto 1 -->
+                <a href="#" class="project-card project-1">
+                    <div class="project-image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1600607686527-6fb886090705?ixlib=rb-4.0.3&auto=format&fit=crop&w=1400&q=80" alt="Casa Horizonte" class="project-image">
+                    </div>
+                    <div class="project-info">
+                        <span class="project-title">Casa Horizonte</span>
+                        <span class="project-category">Residencial</span>
+                    </div>
+                </a>
+
+                <!-- Projeto 2 -->
+                <a href="#" class="project-card project-2">
+                    <div class="project-image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Apartamento Brisa" class="project-image">
+                    </div>
+                    <div class="project-info">
+                        <span class="project-title">Apartamento Brisa</span>
+                        <span class="project-category">Interiores</span>
+                    </div>
+                </a>
+
+                <!-- Projeto 3 -->
+                <a href="#" class="project-card project-3">
+                    <div class="project-image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Galeria Lúmen" class="project-image">
+                    </div>
+                    <div class="project-info">
+                        <span class="project-title">Galeria Lúmen</span>
+                        <span class="project-category">Comercial</span>
+                    </div>
+                </a>
+
+                <!-- Projeto 4 -->
+                <a href="#" class="project-card project-4">
+                    <div class="project-image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Refúgio Sálvia" class="project-image">
+                    </div>
+                    <div class="project-info">
+                        <span class="project-title">Refúgio Sálvia</span>
+                        <span class="project-category">Residencial</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- O PROCESSO -->
+    <section id="processo" class="process section-padding">
+        <div class="container">
+            <div class="process-header">
+                <h2>O Processo Aurora</h2>
+                <p class="process-subtitle">Nossa metodologia é focada na transparência e na co-criação, garantindo que cada detalhe reflita a sua essência do início ao fim.</p>
+            </div>
+            
+            <div class="process-steps">
+                <!-- Passo 1 -->
+                <div class="step-card">
+                    <span class="step-number">01</span>
+                    <h3 class="step-title">Descoberta</h3>
+                    <p class="step-desc">Entendemos sua rotina e suas aspirações.</p>
+                </div>
+
+                <!-- Passo 2 -->
+                <div class="step-card">
+                    <span class="step-number">02</span>
+                    <h3 class="step-title">Concepção</h3>
+                    <p class="step-desc">Traduzimos ideias em modelagens 3D precisas.</p>
+                </div>
+
+                <!-- Passo 3 -->
+                <div class="step-card">
+                    <span class="step-number">03</span>
+                    <h3 class="step-title">Materialização</h3>
+                    <p class="step-desc">Acompanhamento detalhado até a entrega das chaves.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PRE-FOOTER CTA -->
+    <section class="pre-footer section-padding">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Pronto para iniciar seu projeto?</h2>
+                <p>Agende uma consultoria inicial para discutirmos suas ideias.</p>
+                <a href="#contato" class="btn btn-filled">Agendar Reunião</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer id="contato">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col brand-col">
+                    <span class="footer-logo">Studio Aurora</span>
+                    <p>Arquitetura afetiva e atemporal.</p>
+                </div>
+                <div class="footer-col address-col">
+                    <span class="footer-col-title">Endereço</span>
+                    <address>
+                        <p>Av. Brigadeiro Faria Lima, 3000<br>
+                        Jardim Paulistano<br>
+                        São Paulo - SP</p>
+                    </address>
+                </div>
+                <div class="footer-col contact-col">
+                    <span class="footer-col-title">Contato</span>
+                    <p><a href="mailto:contato@studioaurora.com">contato@studioaurora.com</a></p>
+                    <p>+55 (11) 99999-0000</p>
+                </div>
+                <div class="footer-col social-col">
+                    <span class="footer-col-title">Siga-nos</span>
+                    <ul class="social-list">
+                        <li><a href="#">Instagram</a></li>
+                        <li><a href="#">Pinterest</a></li>
+                        <li><a href="#">LinkedIn</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="copyright">
+                    © 2026 Studio Aurora. Todos os direitos reservados.
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js" defer></script>
+
+</body>
+</html>
