@@ -20,6 +20,15 @@
 html {
     scroll-behavior: smooth;
     scroll-padding-top: 100px;
+    /* Firefox */
+    scrollbar-width: none;
+    /* IE/Edge */
+    -ms-overflow-style: none;
+}
+
+/* Chrome, Safari, Opera */
+html::-webkit-scrollbar {
+    display: none;
 }
 
 body {
