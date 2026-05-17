@@ -26,19 +26,32 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Smooth Scroll para links internos
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
+    // Smooth Scroll para links internos da navegação
+    document.querySelectorAll('header nav a').forEach(link => {
+        link.addEventListener('click', function(e) {
+            // Previne o pulo padrão da âncora
             e.preventDefault();
-            const target = document.querySelector(this.getAttribute('href'));
-            if (target) {
-                target.scrollIntoView({
-                    behavior: 'smooth'
-                });
-                // Fecha o menu mobile se estiver aberto
-                if (navLinks && navLinks.classList.contains('active')) {
-                    navLinks.classList.remove('active');
-                    navLinks.style.display = 'none';
+            
+            // Pega o valor do atributo href (ID da seção alvo)
+            const targetId = this.getAttribute('href');
+            
+            // Verifica se é uma âncora válida
+            if (targetId && targetId.startsWith('#')) {
+                // Seleciona o elemento correspondente no DOM
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    // Desliza suavemente até a seção e posiciona no centro da tela
+                    targetElement.scrollIntoView({ 
+                        behavior: 'smooth', 
+                        block: 'center' 
+                    });
+                    
+                    // Fecha o menu mobile se estiver aberto
+                    if (navLinks && navLinks.classList.contains('active')) {
+                        navLinks.classList.remove('active');
+                        navLinks.style.display = 'none';
+                    }
                 }
             }
         });

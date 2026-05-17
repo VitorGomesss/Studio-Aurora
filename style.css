@@ -49,7 +49,10 @@ ul {
 /* ==========================================================================
    TIPOGRAFIA
    ========================================================================== */
-h1, h2, h3, .logo {
+h1,
+h2,
+h3,
+.logo {
     font-family: var(--font-serif);
     font-weight: 400;
 }
@@ -255,6 +258,7 @@ header.scrolled {
         opacity: 0;
         transform: translateY(30px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -526,7 +530,8 @@ footer {
     margin-bottom: 1.5rem;
 }
 
-.footer-col p, .footer-col address {
+.footer-col p,
+.footer-col address {
     color: var(--text-secondary);
     font-size: 1rem;
     font-style: normal;
@@ -581,17 +586,20 @@ footer {
         gap: 40px;
     }
 
-    .project-1, .project-2, .project-3, .project-4 { 
-        grid-column: span 1; 
+    .project-1,
+    .project-2,
+    .project-3,
+    .project-4 {
+        grid-column: span 1;
     }
-    
-    .project-1 .project-image, 
-    .project-2 .project-image, 
-    .project-3 .project-image, 
+
+    .project-1 .project-image,
+    .project-2 .project-image,
+    .project-3 .project-image,
     .project-4 .project-image {
         aspect-ratio: 16 / 9;
     }
-    
+
     .process-steps {
         flex-direction: column;
         gap: 4rem;
@@ -606,21 +614,26 @@ footer {
     .nav-links {
         display: none;
     }
+
     .menu-toggle {
         display: block;
     }
+
     .section-padding {
         padding: 6rem 0;
     }
-    .project-1 .project-image, 
-    .project-2 .project-image, 
-    .project-3 .project-image, 
+
+    .project-1 .project-image,
+    .project-2 .project-image,
+    .project-3 .project-image,
     .project-4 .project-image {
         aspect-ratio: 4 / 3;
     }
+
     .portfolio-header {
         margin-bottom: 3rem;
     }
+
     .footer-grid {
         grid-template-columns: 1fr;
         gap: 3rem;
