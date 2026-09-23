@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Integração Amazon Connect Chat Widget
+   Integração Amazon Connect Chat Widget (Cores Studio Aurora)
    ========================================================================== */
 (function(w, d, x, id){
     s=d.createElement('script');
@@ -12,8 +12,14 @@
 
 amazon_connect('styles', { 
     iconType: 'CHAT', 
-    openChat: { color: '#ffffff', backgroundColor: '#123456' }, 
-    closeChat: { color: '#ffffff', backgroundColor: '#123456'} 
+    openChat: { 
+        color: '#F9F8F6',            // Cor do ícone (Bege claro)
+        backgroundColor: '#2B2A27'   // Fundo do botão (Grafite escuro)
+    }, 
+    closeChat: { 
+        color: '#F9F8F6', 
+        backgroundColor: '#2B2A27' 
+    } 
 });
 
 amazon_connect('snippetId', 'QVFJREFIaEZ5ZjhlbTkwTGlJQ0RQVlozbFpkalBOMm91NWh2aGNUZHZhTTZac1lEMndGcW1TUzZTN0hqRnZPN001UHZDYkpFQUFBQWJqQnNCZ2txaGtpRzl3MEJCd2FnWHpCZEFnRUFNRmdHQ1NxR1NJYjNEUUVIQVRBZUJnbGdoa2dCWlFNRUFTNHdFUVFNa2RBUC9rZDZBdXRJd1N2bUFnRVFnQ3RBQytlMFNxc0tQQ2tmdmtnSmNseTI0YVFXbThlelVuYzJGWkN3cCs3a2JhVURzZ1AzK1RDNTk2U2w6OlNLd2RTMkk4Q0RmZytJOEpVOVpubENtc0tIbTFwZGp4V0tNaXBYRkhvOEdNQ2FjbStWUTUrVWgwMzNOMzBLanZ3dDdEb0tmRFMrSUFJT3JvK1llSDdnZk9YMUtUY3dDZUJRV01naStXUktsMTN4dnFOVi81Q0MyKzdaNzEzYUlvR0JqR1c5Y2IrZnFKN0EyK2xISEo5N0V3SEZHY1VnST0=');
